@@ -44,6 +44,57 @@ export class AppComponent {
       description:'Pariatur voluptatibus quidem consequatur harum, voluptatum mollitia quae.'
     },
   ]
+
+  homes = [
+    {
+      title:"Beautiful Familiy House",
+      country:"usa",
+      rooms:"5",
+      price:"1200000",
+      area:"325",
+      img:"../assets/img/house-1.jpeg"
+},
+{
+  title:"Modern Glass Villa",
+  country:"canada",
+  rooms:"6",
+  price:"2750000",
+  area:"450",
+  img:"../assets/img/house-2.jpeg"
+},
+{
+  title:"Cozy Country House",
+  country:"uk",
+  rooms:"4",
+  price:"850000",
+  area:"250",
+  img:"../assets/img/house-3.jpeg"
+},
+{
+  title:"Large Rustical Villa",
+  country:"portugal",
+  rooms:"6",
+  price:"1950000",
+  area:"480",
+  img:"../assets/img/house-4.jpeg"
+},
+{
+  title:"Majestic Palace House",
+  country:"germany",
+  rooms:"18",
+  price:"9500000",
+  area:"4230",
+  img:"../assets/img/house-5.jpeg"
+},
+{
+  title:"Modern Familiy Apartment",
+  country:"italy",
+  rooms:"3",
+  price:"600000",
+  area:"180",
+  img:"../assets/img/house-6.jpeg"
+},
+  ]
 }
 
 

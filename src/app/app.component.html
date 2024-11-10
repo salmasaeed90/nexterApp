@@ -17,9 +17,90 @@
     
     
   </section>
-  <div class="story__pictures">story img</div>
-  <div class="story__content">story con</div>
-  <section class="homes">homes</section>
-  <section class="gallery">gallery</section>
+  <div class="story__pictures">
+    <img src="../assets/img/story-1.jpeg" alt="Couple with new house" class="story__img--1">
+    <img src="../assets/img/story-2.jpeg" alt="New house" class="story__img--2">
+  </div>
+  <div class="story__content">
+    <h3 class="heading-3 mb-sm">Happy Customers</h3>
+    <h2 class="heading-2 heading-2--dark mb-md">&ldquo;The best decision four our lives&rdquo;</h2>
+    <p class="story__text mb-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus. Quidem consequatur harum volupta!</p>
+    <button class="btn ">Find your own home</button>
+  
+  </div>
+  <section class="homes">
+    @for(home of homes; track home.title){
+      <div class="home">
+        <img [src]="home.img" [alt]="home.title" class="home__img">
+        <i class="fa-solid fa-heart home__like"></i>
+        <h5 class="home__name">{{home.title}}</h5>
+        <div class="home__location">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>{{home.country}}</p>
+        </div>
+        <div class="home__rooms">
+          <i class="fa-solid fa-key"></i> 
+          <p>{{home.rooms}} rooms</p>
+        </div>
+        <div class="home__area">
+          <i class="fa-solid fa-warehouse"></i> 
+          <p>{{home.area}} m<sup>2</sup></p>
+        </div>
+        <div class="home__price">
+          <i class="fa-solid fa-sack-dollar"></i>
+          <p>{{home.price | currency}}</p>
+        </div>
+        <button class="btn home__btn">Contact realtor</button>
+      </div>
+    }
+  </section>
+  <section class="gallery">
+    <figure class="gallery__item gallery__item--1">
+      <img src="../assets/img/gal-1.jpeg" alt="home gallery 1" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--2">
+      <img src="../assets/img/gal-2.jpeg" alt="home gallery 2" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--3">
+      <img src="../assets/img/gal-3.jpeg" alt="home gallery 3" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--4">
+      <img src="../assets/img/gal-4.jpeg" alt="home gallery 4" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--5">
+      <img src="../assets/img/gal-5.jpeg" alt="home gallery 5" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--6">
+      <img src="../assets/img/gal-6.jpeg" alt="home gallery 6" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--7">
+      <img src="../assets/img/gal-7.jpeg" alt="home gallery 7" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--8">
+      <img src="../assets/img/gal-8.jpeg" alt="home gallery 8" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--9">
+      <img src="../assets/img/gal-9.jpeg" alt="home gallery 9" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--10">
+      <img src="../assets/img/gal-10.jpeg" alt="home gallery 10" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--11">
+      <img src="../assets/img/gal-11.jpeg" alt="home gallery 11" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--12">
+      <img src="../assets/img/gal-12.jpeg" alt="home gallery 12" class="gallery__img">
+
+    </figure>
+    <figure class="gallery__item gallery__item--13">
+      <img src="../assets/img/gal-13.jpeg" alt="home gallery 13" class="gallery__img">
+    </figure>
+    <figure class="gallery__item gallery__item--14">
+      <img src="../assets/img/gal-14.jpeg" alt="home gallery 14" class="gallery__img">
+    </figure>
+
+
+
+  </section>
   <footer class="footer">footer</footer> 
 </div>
