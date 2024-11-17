@@ -4,7 +4,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import "./app/styles/variables";
 
 
 *,
@@ -18,6 +18,9 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;// 10px /16px(prowser default ) = 62.5% => 1rem = 10px
+    @media only screen and (max-width:75em){
+        font-size: 50%;
+    }
 }
 
 body{
@@ -30,16 +33,31 @@ body{
 .container{
     display: grid;
     //rows and columns for all application
-    grid-template-rows: 80vh min-content 40vw repeat(3,min-content) ;
-                    // header-features-  story home-gallery-footer  
-                    //         (auto = min-content)
+    grid-template-rows: 100vh min-content 40vw repeat(3,min-content) ;
     grid-template-columns:
     [sidebar-start]8rem [sidebar-end full-start]
-     minmax(6rem ,1fr) 
-     [center-start] repeat(8,[col-start] minmax(min-content,14rem)[col-end]) [center-end] 
-     minmax(6rem ,1fr) [full-start];
+    minmax(6rem ,1fr) 
+    [center-start] repeat(8,[col-start] minmax(min-content,14rem)[col-end]) [center-end] 
+    minmax(6rem ,1fr) [full-start];
 
-    
+    @media only screen and (max-width:62.5em){
+        grid-template-rows: 6rem calc(100vh - 6rem) min-content 40vw repeat(3,min-content) ;
+        grid-template-columns:
+        [ full-start]
+        minmax(6rem ,1fr) 
+        [center-start] repeat(8,[col-start] minmax(min-content,14rem)[col-end]) [center-end] 
+        minmax(6rem ,1fr) [full-start];
+    }
+    @media only screen and (max-width:50em){
+        grid-template-rows: 6rem calc(100vh - 6rem) ;
+        //grid-template-rows: 6rem calc(100vh - 6rem) min-content  min-content min-content repeat(3,min-content) ;
+        //last 6 row are min-content we can remove it because it be calc implictly(by default)
+        grid-template-columns:
+        [ full-start]
+        minmax(6rem ,1fr) 
+        [center-start] repeat(8,[col-start] minmax(min-content,14rem)[col-end]) [center-end] 
+        minmax(6rem ,1fr) [full-start];
+    }
 }
 //min-content=>بتخلي العرض بتاع العمود او الصف في حجم الكونتينت الصغير... يعني بتتتعامل مع المحتوي اللي جوا العمود او الصف
 //max-content=>... يعني بتتتعامل مع المحتوي اللي جوا العمود او الصف بتخلي العرض بتاع العمود يكون في حجم الكونتينت الكبير

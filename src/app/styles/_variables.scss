@@ -18,4 +18,10 @@ $font-display: 'Josefin Sans', sans-serif;
 $transition: all .3s ease;
 
 //box-shadow
-$box-shadow:0 2rem 3rem rgba(#000,.5)
+$box-shadow:0 2rem 3rem rgba(#000,.5);
+
+// media queriy variables
+$bp-largest:75em; //1200px
+$bp-large:62.5em; //1000px
+$bp-medium:50em;  //800px
+$bp-small:37.5em  //600px
